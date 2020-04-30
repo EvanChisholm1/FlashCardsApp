@@ -1,9 +1,11 @@
 // our globally scoped variables
 const createNew = document.querySelector('.createnew');
 const container = document.querySelector('.card-container');
-const page2 = document.querySelector('.page2')
+const page2 = document.querySelector('.page2');
 const page1 = document.querySelector('.page1');
-const outerModal = document.querySelector('.modalOuter')
+const outerModal = document.querySelector('.modalOuter');
+const newCardNav = document.querySelector('.createNew-Nav');
+const randomCardNav = document.querySelector('.answerRandom-Nav')
 
 const randomCardBtn = document.createElement('div');
 randomCardBtn.classList.add('card', 'random');
@@ -160,37 +162,8 @@ container.addEventListener('click', function(e) {
         deleteCard(parseInt(id));
     }
 });
-randomCardBtn.addEventListener('click', getRandomCard)
+randomCardBtn.addEventListener('click', getRandomCard);
+randomCardNav.addEventListener('click', getRandomCard);
+newCardNav.addEventListener('click', newCard);
 
 restoreFromLocalStorage();
-
-
-// modalInner.insertAdjacentText('afterbegin', item.question);
-// modalOuter.classList.add('open');
-// page1.classList.add('offscreen');
-// modalInner.addEventListener('submit',async function handleQuestionAnswer(e) {
-//     e.preventDefault();
-//     if(answerBox.value.includes(item.answer)){
-//         console.log(`the answer is ${item.answer} you got it right Good job!`);
-//         item.timesCorrect++;
-//         console.log(item.timesCorrect);
-//         areYouRight.textContent = `the answer is "${item.answer}" you got it right Good job!`;
-//         areYouRight.classList.add('show');
-//     } else{
-//         console.log(`the answer is ${item.answer} you got it wrong you suck`);
-//     }
-// });
-
-// function newCard() {
-//     const question = prompt('what is your question');
-//     const answer = prompt('what is the answer');
-//     const card = {
-//         question,
-//         answer,
-//         id: Date.now(),
-//         timesCorrect: 0,
-//     }
-//     cards.push(card);
-//     console.log(cards);
-//     container.dispatchEvent(new CustomEvent('cardsUpdated'));
-// }

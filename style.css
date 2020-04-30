@@ -8,10 +8,28 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar {
+    background: #dddddd;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #838383;
+}
+
 h1 {
     font-family: 'Roboto';
     text-align: center;
     font-weight: 300;
+}
+
+
+
+.navButton:focus {
+    outline: none;
 }
 
 .card-container {
@@ -220,4 +238,66 @@ h1 {
 
 .questionMark {
     transform: scale(2);
+}
+
+@media only screen and (max-width: 750px) {
+    .navBar {
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        height: 5em;
+        background-color: #eeeeee;
+        border-radius: 2em 2em 0 0;
+        opacity: 1;
+        box-shadow: -15px -15px 7px #f7f7f7;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navButton {
+        margin: auto;
+        background-color: #eeeeee;
+        border: none;
+        padding: 1em;
+        border-radius: 1em;
+        box-shadow: -7px -7px 10px #f7f7f7,
+        7px 7px 10px #dddddd;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .navBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 6em;
+        background-color: #eeeeee;
+        opacity: 1;
+        box-shadow: 15px 15px 10px #dddddd;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5em;
+    }
+
+    .navButton {
+        background-color: #eeeeee;
+        border: none;
+        margin: 1em 0;
+        padding: 1em;
+        border-radius: 1em;
+        box-shadow: -7px -7px 10px #f7f7f7,
+        7px 7px 10px #dddddd;
+    }  
+
+    .createNew-Nav {
+        margin-top: 4em;
+    }
+    
+    .card-container {
+        padding-left: 8.75em;
+    }
 }
