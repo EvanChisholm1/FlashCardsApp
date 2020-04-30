@@ -171,9 +171,9 @@ h1 {
 }
 
 .back {
-    position: absolute;
+    position: fixed;
     top: 10px;
-    left: 10px;
+    right: 10px;
     background: #eeeeee;
     padding: 1em;
     border-radius: 1em;
