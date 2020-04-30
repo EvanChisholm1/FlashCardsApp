@@ -280,7 +280,7 @@ h1 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0.5em;
+        padding: 0.8em;
     }
 
     .navButton {
