@@ -26,7 +26,9 @@ h1 {
     font-weight: 300;
 }
 
-
+.navBar {
+    transition: transform 0.5s;
+}
 
 .navButton:focus {
     outline: none;
@@ -300,4 +302,8 @@ h1 {
     .card-container {
         padding-left: 8.75em;
     }
+}
+
+.navBar.offscreen {
+    transform: translateX(-200%);
 }

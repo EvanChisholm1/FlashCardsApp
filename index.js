@@ -4,6 +4,7 @@ const container = document.querySelector('.card-container');
 const page2 = document.querySelector('.page2');
 const page1 = document.querySelector('.page1');
 const outerModal = document.querySelector('.modalOuter');
+const navBar = document .querySelector('.navBar');
 const newCardNav = document.querySelector('.createNew-Nav');
 const randomCardNav = document.querySelector('.answerRandom-Nav')
 
@@ -25,12 +26,14 @@ async function newCard() {
         <input type="submit" class="answerButton">
     </form>`;
     page1.classList.add('offscreen');
+    navBar.classList.add('offscreen');
     await wait(50);
     outerModal.classList.add('open');
     const modalBack = document.querySelector('.modalBack');
     modalBack.addEventListener('click', async function() {
         page1.classList.remove('offscreen');
-        outerModal.classList.remove('open');  
+        outerModal.classList.remove('open'); 
+        navBar.classList.remove('offscreen');
         await wait(50);
         outerModal.firstElementChild.remove();
     })
@@ -91,6 +94,7 @@ function getRandomCard() {
 async function handleBackButton() {
     page2.classList.remove('open');
     page1.classList.remove('offscreen');
+    navBar.classList.remove('offscreen');
     await wait(50);
     page2.firstElementChild.remove();
     await wait(50);
@@ -113,6 +117,7 @@ async function answerQuestion(id) {
     await wait(50);
     page2.classList.add('open');
     page1.classList.add('offscreen');
+    navBar.classList.add('offscreen');
     const answerQuestion = document.querySelector('.innerForm');
     answerQuestion.addEventListener('submit', async function handleQuestionAnswer(e) {
         e.preventDefault();
